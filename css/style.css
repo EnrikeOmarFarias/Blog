@@ -9,13 +9,15 @@
 }
 
 :root {
+
+  --fonts: font-family: "Barlow Semi Condensed", serif;
   --colorUno: #47cfac;
   --colorDos: black;
   --colorTres: #fff;
 
   --sm: 1rem;
   --md: 1.6rem;
-  --lg: 2.2rem;
+  --lg: 3rem;
 }
 
 html {
@@ -28,7 +30,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: var(--md);
+  font-family: var(--fonts);
 }
 
 a {
@@ -90,9 +92,53 @@ nav .conteiner__nav-link {
   align-items: center;
   justify-content: flex-end;
   margin-right: 5rem;
+  font-size: var(--md);
+  font-weight: bold;
 }
 
 nav .conteiner__nav-link a {
   color: var(--colorDos);
   border-bottom: 0.1rem solid var(--colorDos);
+}
+
+/*----------HOME MAIN----*/
+
+.home__main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100%;
+  background-image: url("../assets/img/Cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__main section {
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 35rem;
+  margin-top: 8rem;
+}
+
+.home__main-text {
+  font-size: var(--lg);
+  font-weight: 700;
+  letter-spacing: 1.6rem;
+  color: var(--colorTres);
+  text-align: center;
+}
+
+
+.home__main-button {
+  width: 11rem;
+  height: 5rem;
+  background-color: var(--colorUno);
+  display: grid;
+  align-items: center;
+}
+
+.home__main-button a {
+  font-size: var(--md);
+  font-weight: 700;
 }
